@@ -1,0 +1,9 @@
+new measurement -> maak mapje aan enzovoorts (ook upload plattegrond)
+
+add data point -> (geef locatie door enzovoorts) doet ie een scan
+delete data pointer
+
+get all data -> geef alle meetresultaten terug
+
+config -> geef settings door
+get config -> wat zijn de huidige settings

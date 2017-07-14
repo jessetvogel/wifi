@@ -1,0 +1,162 @@
+html, body { height: 100%; }
+
+body {
+  font-family: 'Museo Sans';
+  background-color: #f9f9f9;
+}
+
+.header {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* menu */
+#menu {
+  display: flex;
+  width: 100%;
+  background-color: #3B758C;
+  margin-bottom: 16px;
+}
+
+#menu .button {
+  width: 96px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+#menu .button:hover {
+  background-color: #4c8ba4;
+}
+
+#menu .button.pressed {
+  background-color: #2d5666;
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  height: 512px;
+}
+
+/* map */
+#map {
+  position: relative;
+  flex-grow: 1;
+  text-align: center;
+}
+
+#map img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+#pointer, #pointer-history {
+  position: absolute;
+  top: 0px;
+  left: -100px;
+}
+
+/* panel */
+#panel {
+  margin-left: 16px;
+  width: 384px;
+}
+
+.panel-item {
+  background-color: #3B758C;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  display: none;
+}
+
+#scan {
+  background-color: #9fca56;
+  padding: 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+#scan:hover {
+  background-color: #b4db71;
+}
+
+#scan.disabled {
+  cursor: auto;
+  background-color: #eeeeee;
+}
+
+#scan.disabled .header {
+  color: #d6d6d6;
+}
+
+/* data item */
+.data-item {
+  width: 100%;
+  color: white;
+}
+
+.data-item-label {
+  line-height: 36px;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+}
+
+.data-item-label span {
+  margin-right: 8px;
+}
+
+.data-item-remove {
+  float: right;
+  line-height: 36px;
+}
+
+.data-item-label:hover {
+  background-color: #4c8ba4;
+}
+
+.data-item-content {
+  display: none;
+  background-color: #2d5666;
+  padding: 8px;
+}
+
+.position-x, .position-y {
+  display: none;
+}
+
+/* settings items */
+.settings-item {
+  width: 100%;
+  color: white;
+}
+
+.settings-item-label {
+  line-height: 36px;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+}
+
+.settings-item-label span {
+  margin-right: 8px;
+}
+
+.settings-item-label:hover {
+  background-color: #4c8ba4;
+}
+
+.settings-item-content {
+  display: none;
+  background-color: #2d5666;
+  padding: 8px;
+}
