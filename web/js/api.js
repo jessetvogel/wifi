@@ -13,5 +13,12 @@ $(document).ready(function () {
 
 
 function scan(x, y) {
-  alert('scan(' + x + ', ' + y + ')');
+  // alert('scan(' + x + ', ' + y + ')');
+
+  measurements.push({
+    x: x,
+    y: y,
+    value: 50
+  });
+  updateHeatMap();
 }

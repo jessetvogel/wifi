@@ -10,7 +10,7 @@ var pointerHistory = {
 
 $(document).ready(function () {
 
-  $('#map img').click(function (event) {
+  $('#map').click(function (event) {
       pointer.x = (event.clientX - $('#map img').offset().left) / $('#map img').width();
       pointer.y = (event.clientY - $('#map img').offset().top) / $('#map img').height();
       updatePointers();
