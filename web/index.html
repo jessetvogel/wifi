@@ -10,7 +10,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/heatmap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/data.js"></script>
@@ -32,6 +31,7 @@
     <div id="content">
       <div id="map">
         <img src="img/map.png" />
+        <canvas id="heatmap" style="position: absolute; left: 0px; top: 0px;"></canvas>
         <div id="pointer">
           <!-- <span style="font-size: 20px; cursor: default;">🐨</span> -->
           <img src="img/pointer_red.png" />
@@ -47,32 +47,7 @@
         </div>
         <div class="panel-item" id="data">
           <div class="header">Data</div>
-          <div class="data-list">
-            <div class="data-item">
-              <div class="data-item-label"><span class="data-item-arrow glyphicon glyphicon-chevron-right"></span>data point #1<span class="data-item-remove glyphicon glyphicon-remove"></span></div>
-              <div class="data-item-content">
-                <div class="id">0</div>
-                <div class="position-x">0.5</div>
-                <div class="position-y">0.5</div>
-              </div>
-            </div>
-            <div class="data-item">
-              <div class="data-item-label"><span class="data-item-arrow glyphicon glyphicon-chevron-right"></span>data point #2<span class="data-item-remove glyphicon glyphicon-remove"></span></div>
-              <div class="data-item-content">
-                <div class="id">1</div>
-                <div class="position-x">0.4</div>
-                <div class="position-y">0.6</div>
-              </div>
-            </div>
-            <div class="data-item">
-              <div class="data-item-label"><span class="data-item-arrow glyphicon glyphicon-chevron-right"></span>data point #3<span class="data-item-remove glyphicon glyphicon-remove"></span></div>
-              <div class="data-item-content">informatie!!!</div>
-            </div>
-            <div class="data-item">
-              <div class="data-item-label"><span class="data-item-arrow glyphicon glyphicon-chevron-right"></span>data point #4<span class="data-item-remove glyphicon glyphicon-remove"></span></div>
-              <div class="data-item-content">informatie!!!</div>
-            </div>
-          </div>
+          <div class="data-list"></div>
         </div>
         <div class="panel-item" id="settings">
           <div class="header">Settings</div>

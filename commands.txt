@@ -1,9 +1,15 @@
+/reset
 new measurement -> maak mapje aan enzovoorts (ook upload plattegrond)
 
+/scan
 add data point -> (geef locatie door enzovoorts) doet ie een scan
+
+/remove?id=$id
 delete data pointer
 
+/data
 get all data -> geef alle meetresultaten terug
+
 
 config -> geef settings door
 get config -> wat zijn de huidige settings

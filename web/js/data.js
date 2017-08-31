@@ -1,4 +1,19 @@
-$(document).ready(function () {
+function updateDatalist() {
+  $('#data .data-list').html('');
+  for(var i = 0;i < measurements.length;i ++) {
+    var dataItem = $('<div>').addClass('data-item');
+    dataItem.append($('<div>').addClass('data-item-label')
+      .append($('<span>').addClass('data-item-arrow glyphicon glyphicon-chevron-right'))
+      .append('Data point #' + measurements[i].id)
+      .append($('<span>').addClass('data-item-remove glyphicon glyphicon-remove'))
+    );
+    dataItem.append($('<div>').addClass('data-item-content')
+      .append($('<div>').addClass('id').text(measurements[i].id))
+      .append($('<div>').addClass('position-x').text(measurements[i].x))
+      .append($('<div>').addClass('position-y').text(measurements[i].y))
+    );
+    $('#data .data-list').append(dataItem);
+  }
 
   $('.data-item-label').click(function () {
     if($(this).find('.data-item-arrow').hasClass('glyphicon-chevron-right')) {
@@ -18,8 +33,8 @@ $(document).ready(function () {
 
   $('.data-item-remove').click(function () {
     var id = parseInt($(this).parent().parent().find('.id').text());
-    alert('Remove id ' + id);
-    $(this).parent().parent().remove();
-  });
+    $.ajax('/remove?id=' + id).done(function (data) {
 
-});
+    });
+  });
+}

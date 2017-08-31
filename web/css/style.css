@@ -131,7 +131,7 @@ body {
   padding: 8px;
 }
 
-.position-x, .position-y {
+.id, .position-x, .position-y {
   display: none;
 }
 

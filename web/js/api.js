@@ -11,14 +11,24 @@ $(document).ready(function () {
 
 });
 
-
 function scan(x, y) {
-  // alert('scan(' + x + ', ' + y + ')');
-
-  measurements.push({
-    x: x,
-    y: y,
-    value: 50
+  $.ajax('/scan?x=' + x + '&y=' + y) .done(function (data) {
+    console.log('Scanned!');
   });
-  updateHeatMap();
 }
+
+function getData() {
+  $.ajax('/data').done(function (data) {
+    measurements = data.measurements;
+
+    var hash = JSON.stringify(measurements);
+    if(hash != measurementsHash) {
+      updateHeatMap();
+      updateDatalist();
+      console.log('New hash: ' + hash);
+      measurementsHash = hash;
+    }
+  });
+}
+
+setInterval(getData, 500);
